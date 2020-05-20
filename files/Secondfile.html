@@ -1,0 +1,122 @@
+<html>
+	
+   	<head>
+		<title>Rites Complaint Management System</title>
+		
+		<meta charset="UTF-8">
+		
+    <link href='main.css' type="text/css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Updation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+
+		
+	</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<body>
+		<div id="block_container">
+        <div id="two" align="right"><font size=4 face="Arial" ">Hello!<div id="data"></div>  You are logged in.<br><a href="Firstfile.html">Logout</a></div>
+        </div>
+        <div class="image">
+		<img src="3.jpg" width="350" height="140"/>		
+		</div><center><font size=6 face="Century Gothic" color="#0F245C"<div class="one"><u><b>Complaint Management Centre</b></u></center></div><br>
+               
+            <form action="pictures.html">
+       			<html>
+	
+
+
+<head>
+<script type="text/javascript" src="validate.js"></script>
+</head>
+<body>
+<form action="#" name="Complaint Registration" onsubmit="return(validate());">
+
+<table cellpadding="2" width="50%" height="75%"bgcolor="#F3F1F1" align="center"
+cellspacing="2">
+<tr>
+<td colspan=2>
+<font size=5 face="Times New Roman"><u><b>Complaint Registration Form:</b><u></font>
+</td>
+</tr>
+</div>
+<div class="inp">
+<tr>
+<td>Name</td>
+<td><input type="text" name="Complainer name" id="cname" size="30"></td>
+</tr>
+<tr>
+<td>Seat No</td>
+<td><input type="text" name="seat no" id="sno" size="30"></td>
+</tr>
+
+<tr>
+<td>Employee No.</td>
+<td><input type="text" name="employeeId" id="eid" size="30"></td>
+</tr>
+<tr>
+<td>MobileNo</td>
+<td><input type="text" name="mobileno" id="mobileno" size="30"></td>
+</tr>
+
+
+<tr>
+<td> Complaint Date</td>
+<td><input type="text" name="Complaint Date" id="cdate" size="30"></td>
+</tr>
+
+<tr>
+<td>Complaint To</td>
+<td><select name="Complaint To">
+<option value="-1" selected>select..</option>
+<option value="Finance Department">FINANCE DEPARTMENT</option>
+<option value="Maintenance">MAINTENANCE</option>
+<option value="It">IT</option>
+</select></td>
+</tr>
+
+<tr>
+<td>Complaint Type</td>
+<td><select name="Complaint Type">
+<option value="-1" selected>select..</option>
+<option value="AC Repair">AC REPAIR</option>
+<option value="Furniture Related">FURNITURE RELATED</option>
+<option value="System Related">SYSTEM RELATED</option>
+<option value="telephone Related">TELEPHONE RELATED</option>
+</select></td>
+</tr>
+<tr>
+<td>Complaint Details</td>
+<td><input type="text" name="complaint details" id="cdetails	"
+size="30"></td>
+</tr>
+</div>
+
+<td><input type="reset"></td>
+<td colspan="2"><input type="submit" value="Submit Form" /></td>
+</tr>
+</table>
+</form>
+
+		</form>
+<script language="JavaScript">
+  function processForm()
+  {
+    var parameters = location.search.substring(1).split("&");
+
+    var temp = parameters[0].split("=");
+    l = unescape(temp[1]);
+   
+    document.getElementById("data").innerHTML = l;
+   
+  }
+    processForm();
+
+
+</body>
+</html>
