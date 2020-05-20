@@ -1,0 +1,1417 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	RITES
+</title><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7,chrome=1" />
+
+    <script src="JAVASCRIPTS/jquery-1.5.1.js" type="text/javascript"></script>
+
+    <link href="../../themes/start/jquery-ui-1.8.2.custom.css" rel="stylesheet" type="text/css" /><link rel="shortcut icon" href="../../IMAGES/lnmiit_Style.png" type="image/x-icon" /><link href="../../Css/master.css" rel="stylesheet" type="text/css" /><link href="../../Css/Theme1.css" rel="stylesheet" type="text/css" /><link href="../../includes/modalbox.css" rel="stylesheet" type="text/css" /><link href="../../CSS/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+    <script src="Content/input_controls.js" type="text/javascript"></script>
+
+    
+    <link href="../../Content/demo_page.css" rel="stylesheet" type="text/css" /><link href="../../Content/demo_table.css" rel="stylesheet" type="text/css" /><link href="../../Content/demo_table_jui.css" rel="stylesheet" type="text/css" /><link href="../../Content/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" /><link href="../../Content/themes/smoothness/jquery-ui-1.7.2.custom.css" rel="stylesheet" type="text/css" /><link rel="stylesheet" type="text/css" href="../../CSS/jquery-ui.css" />
+    
+
+    <script src="JAVASCRIPTS/jquery-1.5.1.js" type="text/javascript"></script>
+
+    <script src="JAVASCRIPTS/jquery.ui.core.js" type="text/javascript"></script>
+
+    <script src="JAVASCRIPTS/jquery.ui.widget.js" type="text/javascript"></script>
+
+    <script src="JAVASCRIPTS/jquery.ui.datepicker.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        body
+        {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+
+        .modalBackground
+        {
+            background-color: Black;
+            filter: alpha(opacity=60);
+            opacity: 0.6;
+        }
+
+        .modalPopup
+        {
+            background-color: #FFFFFF;
+            width: 300px;
+            border: 3px solid #0DA9D0;
+            border-radius: 12px;
+            padding: 0;
+        }
+
+            .modalPopup .header
+            {
+                background-color: #2FBDF1;
+                height: 30px;
+                color: White;
+                line-height: 30px;
+                text-align: center;
+                font-weight: bold;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+            }
+
+            .modalPopup .body
+            {
+                padding: 10px;
+                min-height: 50px;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .modalPopup .footer
+            {
+                padding: 6px;
+            }
+
+            .modalPopup .yes, .modalPopup .no
+            {
+                height: 23px;
+                color: White;
+                line-height: 23px;
+                text-align: center;
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+
+            .modalPopup .yes
+            {
+                background-color: #2FBDF1;
+                border: 1px solid #0DA9D0;
+            }
+
+            .modalPopup .no
+            {
+                background-color: #9F9F9F;
+                border: 1px solid #5C5C5C;
+            }
+    </style>
+
+
+    <style type="text/css">
+        /* highlighting the text box on focus */ input:focus, textarea:focus, select:focus {
+            /*background-color: lightyellow;*/ /*border: solid 2px #e1e1b1;*/
+            border-color: Blue;
+            border-style: groove;
+        }
+
+        input:select {
+            border-color: Blue;
+            border-style: groove;
+        }
+
+        input:hover {
+            border-color: Gray;
+            border-style: groove;
+        }
+
+        select:select {
+            border-color: Blue;
+            border-style: groove;
+        }
+
+        select:hover {
+            border-color: Gray;
+            border-style: groove;
+        }
+
+        .visibleDiv, #topLeft, #topRight, #bottomLeft, #bottomRight {
+            position: fixed;
+            width: 280px;
+            border: solid 1px #e1e1b1;
+            vertical-align: middle;
+            background: #ffdab9;
+            text-align: center;
+        }
+
+        #topLeft {
+            top: 10px;
+            left: 10px;
+        }
+
+        #topRight {
+            top: 10px;
+            right: 10px;
+        }
+
+        #bottomLeft {
+            bottom: 10px;
+            left: 10px;
+        }
+
+        #bottomRight {
+            bottom: 1px;
+            right: 1px;
+            opacity: .4;
+            filter: Alpha(Opacity=40);
+        }
+    </style>
+<link href="/mis/WebResource.axd?d=4tELhN2VCIBJ_iTbeD3Qo8td3hqiENkUD0wd0gDrrVGyU-FS709C8e6MnUebN8HEjs8dOpA7-CC5ykyQLjYowgOBhSZZo2kZN7DZJyA2PC6pHawdm4sC6_WfoLnUkRBbVT6-Fr21jejA9NTJBa1Y_1u0vhXTv8nsOauyuEXa-IU1&amp;t=636016331060000000" type="text/css" rel="stylesheet" /><style type="text/css">
+	.ctl00_mainMenu_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.ctl00_mainMenu_1 { text-decoration:none; }
+	.ctl00_mainMenu_2 {  }
+	.ctl00_mainMenu_3 { border-style:none; }
+	.ctl00_mainMenu_4 {  }
+	.ctl00_mainMenu_5 { border-style:none; }
+	.ctl00_mainMenu_6 {  }
+	.ctl00_mainMenu_7 { border-style:none; }
+	.ctl00_mainMenu_8 {  }
+
+</style></head>
+<body class="body">
+    <form name="aspnetForm" method="post" action="./complaint.aspx?pageno=1339" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm" enctype="multipart/form-data">
+<div>
+<input type="hidden" name="ctl00_ToolkitScriptManager1_HiddenField" id="ctl00_ToolkitScriptManager1_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEyNTYzMDczOTIPZBYCZg9kFgICAw8WAh4HZW5jdHlwZQUTbXVsdGlwYXJ0L2Zvcm0tZGF0YRYMAgkPDxYCHgRUZXh0BRhXZWxjb21lIEFESVRJIENIQVRVUlZFRElkZAILDw8WAh4ISW1hZ2VVcmwFJX4vc2hvd2ltYWdlLmFzcHg/aWQ9MzE3MyZ0eXBlPXN0dWRlbnRkZAIPDw8WAh8CBSV+L3Nob3dpbWFnZS5hc3B4P2lkPTMxNzMmdHlwZT1zdHVkZW50ZGQCEQ8PFgIfAQUjV2VsY29tZSBBRElUSSBDSEFUVVJWRURJICgxN1VDQzAwNilkZAIZDzwrAA0BDBQrAAQFCzA6MCwwOjEsMDoyFCsAAhYGHwEFCEFDQURFTUlDHgtOYXZpZ2F0ZVVybGUeClNlbGVjdGFibGVoFCsAAgUDMDowFCsAAhYGHwEFD1N0dWRlbnQgU2VjdGlvbh8DZR8EaBQrAAQFCzA6MCwwOjEsMDoyFCsAAhYEHwEFC0Ryb3AgQ291cnNlHwMFJGFjYWRlbWljL2Ryb3Bjb3Vyc2UuYXNweD9wYWdlbm89MTIxNmQUKwACFgQfAQUPU3R1ZGVudCBEZXRhaWxzHwMFLGFjYWRlbWljL1N0dWRlbnRJbmZvcm1hdGlvbi5hc3B4P3BhZ2Vubz0xMTQ3ZBQrAAIWBB8BBRdCYW5rIERldGFpbHMgU3VibWlzc2lvbh8DBSxBQ0FERU1JQy9TdHVkZW50QmFua2RldGFpbHMuYXNweD9wYWdlbm89MTI5M2QUKwACFgYfAQUTR1JJRVZBTkNFIFJFRFJFU1NBTB8DZR8EaBQrAAIFAzA6MBQrAAIWBh8BBQtUcmFuc2FjdGlvbh8DZR8EaBQrAAIFAzA6MBQrAAIWBB8BBRZDb21wbGFpbnQgUmVnaXN0cmF0aW9uHwMFMUNvbXBsYWludHMvVFJBTlNBQ1RJT04vY29tcGxhaW50LmFzcHg/cGFnZW5vPTEzMzlkFCsAAhYGHwEFE1JFUVVFU1QvQVBQTElDQVRJT04fA2UfBGgUKwACBQMwOjAUKwACFgYfAQULVHJhbnNhY3Rpb24fA2UfBGgUKwACBQMwOjAUKwACFgQfAQUNRS1BcHBsaWNhdGlvbh8DBTRDb21wbGFpbnRzL1RSQU5TQUNUSU9OL0VhcHBsaWNhdGlvbi5hc3B4P3BhZ2Vubz0xMzgwZBYWZg9kFgJmDxUBCEFDQURFTUlDZAIBD2QWAmYPFQEPU3R1ZGVudCBTZWN0aW9uZAICD2QWAmYPFQELRHJvcCBDb3Vyc2VkAgMPZBYCZg8VAQ9TdHVkZW50IERldGFpbHNkAgQPZBYCZg8VARdCYW5rIERldGFpbHMgU3VibWlzc2lvbmQCBQ9kFgJmDxUBE0dSSUVWQU5DRSBSRURSRVNTQUxkAgYPZBYCZg8VAQtUcmFuc2FjdGlvbmQCBw9kFgJmDxUBFkNvbXBsYWludCBSZWdpc3RyYXRpb25kAggPZBYCZg8VARNSRVFVRVNUL0FQUExJQ0FUSU9OZAIJD2QWAmYPFQELVHJhbnNhY3Rpb25kAgoPZBYCZg8VAQ1FLUFwcGxpY2F0aW9uZAIbD2QWAgIDD2QWAmYPZBYMAgEPZBYGAgMPDxYCHwEFEzExLzA2LzIwMTkgMTE6MDE6MjQWAh4IcmVhZG9ubHkFBHRydWVkAgkPDxYCHwEFEEFESVRJIENIQVRVUlZFRElkZAINDxAPFgYeDURhdGFUZXh0RmllbGQFCERFUFROQU1FHg5EYXRhVmFsdWVGaWVsZAUGREVQVElEHgtfIURhdGFCb3VuZGdkDxYGAgECAgIDAgQCBQIGFgYQBRdEZWFuIG9mIEFjYWRlbWljIEFmZmFpcgUBNmcQBSFEZWFuIG9mIFJlc2VhcmNoIGFuZCBDb25zdWx0YW5jeSAFATVnEAUJUmVnaXN0cmFyBQE0ZxAFDENoaWVmIFdhcmRlbgUBM2cQBQdGaW5hbmNlBQEyZxAFDE1haW50ZW5hbmNlIAUBMWcWAWZkAgMPFgIeB1Zpc2libGVnFgJmD2QWAgIBD2QWCAIBDw8WAh8BBQgxN1VDQzAwNmRkAgMPDxYCHwEFDDkxOTk4MzEyOTIxNmRkAgUPDxYCHwEFGGFydW5rdW1hcjYwMDAwQGdtYWlsLmNvbWRkAgcPDxYCHwEFA0NDRWRkAgUPZBYQAgEPEA8WBh8GBQhBUkVBTkFNRR8HBQZBUkVBSUQfCGdkEBUbDVBsZWFzZSBTZWxlY3QEQkgtMQRCSC0yBEJIIDMCR0gWRmFjdWx0eS9TdGFmZiBRdWFydGVycwtHdWVzdCBIb3VzZRRMZWN0dXJlIEhhbGwgQ29tcGxleA5BY2FkZW1pYyBCbG9jawtNYWluIEdhdGUgMQtNYWluIEdhdGUgMhNTcG9ydHMgQ29tcGxleCBBcmVhDE1lZGljYWwgVW5pdBBTaG9wcGluZyBDb21wbGV4Bk1lc3MgQQZNZXNzIEILUGxheSBHcm91bmQXRXh0ZXJuYWwgSW5mcmFzdHJ1Y3R1cmUMTU1FIFdvcmtzaG9wDE1NRSBCdWlsZGluZw9DZW50cmFsIExpYnJhcnkRTWFpbnRlbmFuY2UgU3RvcmUWTWF0ZXJpYWwgU3ludGhlc2lzIExhYg5BZG1pc3Npb24gQ2VsbBZCYWxqaSBWaWhhciBBcGFydG1lbnRzD0ZhY3VsdHkgT2ZmaWNlcwtTdWItU3RhdGlvbhUbATACMTcCMTgCMTkCMjACMjECMjICMjMCMjQCMjUCMjYCMjcCMjgCMjkCMzACMzECMzICMzMCMzQCMzUCMzcCMzgCMzkCNDACNDICNDMCNDQUKwMbZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnFgFmZAIVDw8WAh4JTWF4TGVuZ3RoZmRkAhsPFhoeGUN1bHR1cmVEZWNpbWFsUGxhY2Vob2xkZXIFAS4eDklucHV0RGlyZWN0aW9uCymKAUFqYXhDb250cm9sVG9vbGtpdC5NYXNrZWRFZGl0SW5wdXREaXJlY3Rpb24sIEFqYXhDb250cm9sVG9vbGtpdCwgVmVyc2lvbj0zLjAuMjAyMjkuMjA4NDMsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MjhmMDFiMGU4NGI2ZDUzZQAeC0N1bHR1cmVOYW1lBQVlbi1HQh4WQ3VsdHVyZVRpbWVQbGFjZWhvbGRlcgUBOh4KQWNjZXB0QW1QbWgeG0N1bHR1cmVUaG91c2FuZHNQbGFjZWhvbGRlcgUBLB4WQ3VsdHVyZUFNUE1QbGFjZWhvbGRlcgUFQU07UE0eDERpc3BsYXlNb25leQsphgFBamF4Q29udHJvbFRvb2xraXQuTWFza2VkRWRpdFNob3dTeW1ib2wsIEFqYXhDb250cm9sVG9vbGtpdCwgVmVyc2lvbj0zLjAuMjAyMjkuMjA4NDMsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MjhmMDFiMGU4NGI2ZDUzZQAeE092ZXJyaWRlUGFnZUN1bHR1cmVoHhZDdWx0dXJlRGF0ZVBsYWNlaG9sZGVyBQEvHhFDdWx0dXJlRGF0ZUZvcm1hdAUDRE1ZHg5BY2NlcHROZWdhdGl2ZQsrBQAeIEN1bHR1cmVDdXJyZW5jeVN5bWJvbFBsYWNlaG9sZGVyBQLCo2QCIQ8PFgIfCmZkZAIjDxYYHwsFAS4fDAsrBAAfDQUFZW4tR0IfDgUBOh8QBQEsHxEFBUFNO1BNHxILKwUAHxNoHxQFAS8fFQUDRE1ZHxYLKwUAHxcFAsKjZAInDw8WAh8KZmRkAikPFhgfCwUBLh8MCysEAB8NBQVlbi1HQh8OBQE6HxAFASwfEQUFQU07UE0fEgsrBQAfE2gfFAUBLx8VBQNETVkfFgsrBQAfFwUCwqNkAjUPZBYEAgIPZBYCAgEPEGRkFgFmZAIGD2QWAgIBDxBkZBYBZmQCBw9kFgICAw9kFgICAQ8UKwACZGRkAgsPFCsAAg8WBB8IZx4LXyFJdGVtQ291bnQCAWRkFgJmD2QWAgIBD2QWBAIBDw8WAh4PQ29tbWFuZEFyZ3VtZW50BQQ1MjMzZGQCAg8VCR9NQU4vMjAxOC0yMDE5IEkvMjctMDgtMjAxOC81MjMzBDUyMzMTMjcvMDgvMjAxOCAyMzoyNzoyM8ICbXkgd2luZG93cyBuZXQgaXMgYnJva2VuIHdoaWNoIGxlYWRzIHRvIG1vc3F1aXRvcyBpbnNpZGUgbXkgcm9vbSBhbmQgc2Vjb25kbHkgbXkgZG9vcnMgbG9jayBpcyBicm9rZW4gd2hpY2ggbWFrZXMgdXMgZGlmZmljdWx0IHRvIGxvY2sgYW5kIG9wZW4gaXQgYW5kIHRoaXJkbHkgdGhlcmUgaXMgYSBodWdlIGdhcCBiZXR3ZWVuIHRoZSBnbGFzcyB3aW5kb3cgYWJvdmUgdGhlIGRvb3IgYW5kIHdhbGwgd2hpY2ggbGVhZHMgdG8gbGl6YXJkcyBlbnRlciBvdXIgcm9vbSAgICAgICAgc28gcGxlYXNlIHJlcGFpciB0aGVzZSB0aGluZ3MgYXMgc29vbiBhcyBwb3NzaWJsZQJHSAVCLTIxMQhDT01QTEVURQxNYWludGVuYW5jZSAEQWpheWQCDQ8UKwACZBAWABYAFgBkGAMFIWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkZHBQYWdlcg88KwAEAQMCAWQFJWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkbHZDb21wbGFpbnQPFCsADmRkZGRkZGQUKwABZAIBZGRkZgIKZAUgY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRsdmZpbGUPZ2SSMpDK3AqqnVzzDfqfZV7ya3HsgKISTxI3iSDrNtqCFQ==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/mis/WebResource.axd?d=_vbz0uHrJm7PKhdvYzdmdh8gjGQ7C3z2nTmMiFCCOmsauMXtbqwPCvwb3Dp7E8HUju3P2tYf92vvdmK7ppvoFxmSpNHavj7zC2L1tWE7JCw1&amp;t=636776922783889403" type="text/javascript"></script>
+
+
+<script src="/mis/ScriptResource.axd?d=AxJFpLWGZ0nEQJgAD_bJrfE5re_2muClfelp4sRPl0Z5r8haUX_Pxh4Y0Xl3gmc_g-GeDHb5IBBrGc7KvexXyoi4aU8oowLcZ0flU46DdwrH1TV6Ne-a7SQYE5tzvawBRfw-Bhc6rMQOQvmshO7W-w2&amp;t=6e962c21" type="text/javascript"></script>
+<script src="/mis/ScriptResource.axd?d=PCKwD8FSdY-B0y3UoQCrt8dJaca_hT-68F6vefSHf0ynOCNLl5m8DvaH1eNCJgwls2JMfSfh2y5eEe6OH2u-Oma_8hidb3glejdZw_XsedWL5tbjyY104OXoAprzLUxbBAwGNMCmQtNSI1I5qtOlUUba5l9CFLm7X-qvDdIhXb01&amp;t=6e962c21" type="text/javascript"></script>
+<script src="/mis/ScriptResource.axd?d=GOoceiyJPs41MTeRP7F-HyDXgb31CBUJRxnqpeZDmhaxFjuj5a9M30VDUxU5rVePh7m6b9ucS7cslKVHnTNpHQzl4rXwEsTBwgJdK7k7PEofBYMCyAweHFTOis1lVPWeq6lK_CMf9fwYv0AO3UtVoDxTpgivxsolb9fTCpRXfHbThr_vSBHk2vwF7fdhkf6t0&amp;t=ffffffffc7a6ddb0" type="text/javascript"></script>
+<script src="/mis/ScriptResource.axd?d=b3CJ_826A5NVZLkxE5RlZOL2nLFfJT_HmxnJ-IjhS3ti9yOZ1PrpWGRxmBWPvgkRrzvAGawCEJ1zIZHrL7sqHNRl9yKAe0hypG88BhGlRfSuhc6E6oqZ8lT7Ffwi02rYCGQXTmdhTpTkwmT1LurKluxB3ywYh5jCDZpZPWKjomInaZL46x4EwKCbeuRWMjFA0&amp;t=ffffffff999c3159" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/mis/ScriptResource.axd?d=OxAcRbRPD2BXE_mPIEInZUfTEL4h_QSISw1iHK7XTI0rXq-YHkBM1GjTtonxlBIepKr6ivb-ho95GFCKgq1bCuPRI12DlSxRbWpWHHdWHBvJWX-3fwJEE-FRdj29b6ByRK_GLs1-aRQkcmn9Hr7lr2pwhrqmQHCxbWsf2vfmbKzuMJ4S9hUtzViW__zOxAX70&amp;t=ffffffff999c3159" type="text/javascript"></script>
+<script src="/mis/Complaints/TRANSACTION/complaint.aspx?_TSM_HiddenField_=ctl00_ToolkitScriptManager1_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.0.20229.20843%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a3b7d1b28-161f-426a-ab77-b345f2c428f5%3ae2e86ef9%3aa9a7729d%3a9ea3f0e2%3a9e8e87e9%3a1df13a87%3a4c9865be%3aba594826%3a507fcf1b%3ac7a4182e%3afde3863c%3a182913ba%3abae32fb7%3a3858419b%3a96741c43%3ac4c00916%3ac7c04611%3acd120801%3a38ec41c0" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="7076EA6C" />
+	<input type="hidden" name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="rxxa7km2NhN2qOv8-xvIAB44dFah22tGRPN2sdeYucRJNeFIMqks48s0yZs0ByIp0bTiTn-hi3pxO-vI0zitpwwg6zPN1BpH4G04wOlkBTD2mASAlumtdLQPett-RiFADqK2vsFAeydB6P72csw-bw2" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspnetForm', ['tctl00$ContentPlaceHolder1$UpdatePanel1','','tctl00$ContentPlaceHolder1$UpdatePanel3','','tctl00$ContentPlaceHolder1$updResultProcess','','tctl00$updpnlError',''], [], ['ctl00$ContentPlaceHolder1$btnAdd',''], 90, 'ctl00');
+//]]>
+</script>
+
+
+       
+        
+        <table cellpadding="0" cellspacing="0" width="100%">
+            <tr style="background-color: #F2F2F2">
+                <td style="text-align: center; vertical-align: middle;">
+                    
+                    <table width="100%" cellspacing="0" style="color: rgb(85, 85, 85);">
+                        <tr>
+                            <td width="115px" valign="top">
+                                <img id="ctl00_imgLogo" src="../../IMAGES/logo.jpg" style="border-width:0px;" />
+
+                            </td>
+                            <td align="center" bgcolor="#F2F2F2">
+                                <img id="ctl00_Image1" src="../../IMAGES/text_img.jpg" style="border-width:0px;" />
+                            </td>
+                            <td align="right" style="vertical-align: middle; padding-right: 10px;">
+                                <a id="test" onclick="showglobclk();" style="cursor: pointer">
+                                    <span id="ctl00_lblLink" style="color:Black;font-family:Verdana;font-size:8pt;font-weight:bold;color: Gray;">Welcome ADITI CHATURVEDI</span>
+                                    <img id="ctl00_imgNoPhoto" src="../../showimage.aspx?id=3173&amp;type=student" style="height:38px;width:32px;border-width:0px;" />
+                                    <img id="ctl00_imgDown" src="../../IMAGES/down.gif" style="border-width:0px;" />
+                                </a>
+                                <div id="globalSubNav" class="globalSubNav" onmouseover="showglobnav();" onmouseout="hideglobnav();">
+                                    <table cellpadding="2" cellspacing="2" style="width: 100%">
+                                        <tr>
+                                            <td>
+                                                <img id="ctl00_imgUser" src="../../showimage.aspx?id=3173&amp;type=student" style="height:72px;width:72px;border-width:0px;" />
+                                            </td>
+                                            <td align="center" style="vertical-align: top">
+                                                <table cellpadding="0" cellspacing="0" style="width: 100%">
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <span id="ctl00_lblUserName" style="color:Black;font-family:Verdana;font-size:8pt;font-weight:bold;color: black;">Welcome ADITI CHATURVEDI (17UCC006)</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align: left; padding-top: 10px; vertical-align: top">
+                                                            <a id="ctl00_lnkGome" class="a" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$lnkGome&quot;, &quot;&quot;, false, &quot;&quot;, &quot;../../home.aspx&quot;, false, true))" style="font-size:8pt;font-weight:bold;text-decoration:none;color: White;">Home</a>
+                                                        </td>
+                                                        <td style="text-align: right; padding-top: 10px; vertical-align: top">
+                                                            <a id="ctl00_lnkChangePsw" class="a" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$lnkChangePsw&quot;, &quot;&quot;, false, &quot;&quot;, &quot;../../changePassword.aspx&quot;, false, true))" style="font-size:8pt;font-weight:bold;text-decoration:none;color: White;">Change Password</a>
+                                                            <br />
+                                                            <a onclick="return confirm(&#39;Do you want to Sign out?&#39;);" id="ctl00_lnksignout" class="a" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$lnksignout&quot;, &quot;&quot;, false, &quot;&quot;, &quot;../../default.aspx&quot;, false, true))" style="font-size:8pt;font-weight:bold;text-decoration:none;color: White;">Sign out</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="trMenu">
+                    <a href="#ctl00_mainMenu_SkipLink"><img alt="Skip Navigation Links" src="/mis/WebResource.axd?d=GtaywQi7KxypvSzE9QqOTH8bil12gxzzEaHoVHwTLdsSQyZjqrLxbiq-7alHssTswZms6L3R_ktTQENfVU4NvPWOoPouHk5gG5MRzdal8ic1&amp;t=636776922783889403" width="0" height="0" style="border-width:0px;" /></a><table id="ctl00_mainMenu" class="ctl00_mainMenu_2" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mainMenun0"><table class="MenuItem ctl00_mainMenu_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;"><a class="ctl00_mainMenu_1 MenuItem ctl00_mainMenu_3" href="#" style="border-style:none;font-size:1em;cursor:text;">
+                            ACADEMIC
+                        </a></td><td style="width:0;"><img src="/mis/WebResource.axd?d=ful_p9chnA33eZjzvkJCWUvMOpAB5G_Q8-RJgy0QbkkQWgrHZvMoqBYwA6ZS_Pg589JMftU17GRCAMhPD9oWRIcqiNd9KvVcaNi50SVR3ak1&amp;t=636776922783889403" alt="Expand ACADEMIC" style="border-style:none;vertical-align:middle;" /></td>
+			</tr>
+		</table></td><td onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mainMenun1"><table class="MenuItem ctl00_mainMenu_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;"><a class="ctl00_mainMenu_1 MenuItem ctl00_mainMenu_3" href="#" style="border-style:none;font-size:1em;cursor:text;">
+                            GRIEVANCE REDRESSAL
+                        </a></td><td style="width:0;"><img src="/mis/WebResource.axd?d=ful_p9chnA33eZjzvkJCWUvMOpAB5G_Q8-RJgy0QbkkQWgrHZvMoqBYwA6ZS_Pg589JMftU17GRCAMhPD9oWRIcqiNd9KvVcaNi50SVR3ak1&amp;t=636776922783889403" alt="Expand GRIEVANCE REDRESSAL" style="border-style:none;vertical-align:middle;" /></td>
+			</tr>
+		</table></td><td onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mainMenun2"><table class="MenuItem ctl00_mainMenu_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;"><a class="ctl00_mainMenu_1 MenuItem ctl00_mainMenu_3" href="#" style="border-style:none;font-size:1em;cursor:text;">
+                            REQUEST/APPLICATION
+                        </a></td><td style="width:0;"><img src="/mis/WebResource.axd?d=ful_p9chnA33eZjzvkJCWUvMOpAB5G_Q8-RJgy0QbkkQWgrHZvMoqBYwA6ZS_Pg589JMftU17GRCAMhPD9oWRIcqiNd9KvVcaNi50SVR3ak1&amp;t=636776922783889403" alt="Expand REQUEST/APPLICATION" style="border-style:none;vertical-align:middle;" /></td>
+			</tr>
+		</table></td>
+	</tr>
+</table><div id="ctl00_mainMenun0Items" class="ctl00_mainMenu_0">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mainMenun3">
+			<td><table class="DynamicMenuItem ctl00_mainMenu_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_mainMenu_1 DynamicMenuItem ctl00_mainMenu_5" href="#" style="border-style:none;font-size:1em;cursor:text;">
+                            Student Section
+                        </a></td><td style="width:0;"><img src="/mis/WebResource.axd?d=ful_p9chnA33eZjzvkJCWUvMOpAB5G_Q8-RJgy0QbkkQWgrHZvMoqBYwA6ZS_Pg589JMftU17GRCAMhPD9oWRIcqiNd9KvVcaNi50SVR3ak1&amp;t=636776922783889403" alt="Expand Student Section" style="border-style:none;vertical-align:middle;" /></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table><div class="DynamicMenuItem ctl00_mainMenu_6 ctl00_mainMenu_0" id="ctl00_mainMenun0ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/mis/WebResource.axd?d=k25ctVcKACfH6ogyRPkhENCgJw1T0_eEKyQLKcystG159e_h0a7TLoGAZFaxOrU8EMoiByIZUe7BhDYcvIxgu3q7C-kudNvbp-c9wud72sM1&amp;t=636776922783889403" alt="Scroll up" />
+	</div><div class="DynamicMenuItem ctl00_mainMenu_6 ctl00_mainMenu_0" id="ctl00_mainMenun0ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/mis/WebResource.axd?d=Ez9wEUWQl5VNcWbA1jjpkUFrL3PgtK_f8v6QwCwFCHHf1fMip4679AGkW07Ts3wE56VrRydKmy7I2QnIYQjIl4OAlYlHoCVyjzG7iSTAVVg1&amp;t=636776922783889403" alt="Scroll down" />
+	</div>
+</div><div id="ctl00_mainMenun3Items" class="ctl00_mainMenu_0">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mainMenun4">
+			<td><table class="DynamicMenuItem ctl00_mainMenu_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_mainMenu_1 DynamicMenuItem ctl00_mainMenu_5" href="../../academic/dropcourse.aspx?pageno=1216" style="border-style:none;font-size:1em;">
+                            Drop Course
+                        </a></td>
+				</tr>
+			</table></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mainMenun5">
+			<td><table class="DynamicMenuItem ctl00_mainMenu_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_mainMenu_1 DynamicMenuItem ctl00_mainMenu_5" href="../../academic/StudentInformation.aspx?pageno=1147" style="border-style:none;font-size:1em;">
+                            Student Details
+                        </a></td>
+				</tr>
+			</table></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mainMenun6">
+			<td><table class="DynamicMenuItem ctl00_mainMenu_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_mainMenu_1 DynamicMenuItem ctl00_mainMenu_5" href="../../ACADEMIC/StudentBankdetails.aspx?pageno=1293" style="border-style:none;font-size:1em;">
+                            Bank Details Submission
+                        </a></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table><div class="DynamicMenuItem ctl00_mainMenu_6 ctl00_mainMenu_0" id="ctl00_mainMenun3ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/mis/WebResource.axd?d=k25ctVcKACfH6ogyRPkhENCgJw1T0_eEKyQLKcystG159e_h0a7TLoGAZFaxOrU8EMoiByIZUe7BhDYcvIxgu3q7C-kudNvbp-c9wud72sM1&amp;t=636776922783889403" alt="Scroll up" />
+	</div><div class="DynamicMenuItem ctl00_mainMenu_6 ctl00_mainMenu_0" id="ctl00_mainMenun3ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/mis/WebResource.axd?d=Ez9wEUWQl5VNcWbA1jjpkUFrL3PgtK_f8v6QwCwFCHHf1fMip4679AGkW07Ts3wE56VrRydKmy7I2QnIYQjIl4OAlYlHoCVyjzG7iSTAVVg1&amp;t=636776922783889403" alt="Scroll down" />
+	</div>
+</div><div id="ctl00_mainMenun1Items" class="ctl00_mainMenu_0">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mainMenun7">
+			<td><table class="DynamicMenuItem ctl00_mainMenu_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_mainMenu_1 DynamicMenuItem ctl00_mainMenu_5" href="#" style="border-style:none;font-size:1em;cursor:text;">
+                            Transaction
+                        </a></td><td style="width:0;"><img src="/mis/WebResource.axd?d=ful_p9chnA33eZjzvkJCWUvMOpAB5G_Q8-RJgy0QbkkQWgrHZvMoqBYwA6ZS_Pg589JMftU17GRCAMhPD9oWRIcqiNd9KvVcaNi50SVR3ak1&amp;t=636776922783889403" alt="Expand Transaction" style="border-style:none;vertical-align:middle;" /></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table><div class="DynamicMenuItem ctl00_mainMenu_6 ctl00_mainMenu_0" id="ctl00_mainMenun1ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/mis/WebResource.axd?d=k25ctVcKACfH6ogyRPkhENCgJw1T0_eEKyQLKcystG159e_h0a7TLoGAZFaxOrU8EMoiByIZUe7BhDYcvIxgu3q7C-kudNvbp-c9wud72sM1&amp;t=636776922783889403" alt="Scroll up" />
+	</div><div class="DynamicMenuItem ctl00_mainMenu_6 ctl00_mainMenu_0" id="ctl00_mainMenun1ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/mis/WebResource.axd?d=Ez9wEUWQl5VNcWbA1jjpkUFrL3PgtK_f8v6QwCwFCHHf1fMip4679AGkW07Ts3wE56VrRydKmy7I2QnIYQjIl4OAlYlHoCVyjzG7iSTAVVg1&amp;t=636776922783889403" alt="Scroll down" />
+	</div>
+</div><div id="ctl00_mainMenun7Items" class="ctl00_mainMenu_0">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mainMenun8">
+			<td><table class="DynamicMenuItem ctl00_mainMenu_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_mainMenu_1 DynamicMenuItem ctl00_mainMenu_5" href="complaint.aspx?pageno=1339" style="border-style:none;font-size:1em;">
+                            Complaint Registration
+                        </a></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table><div class="DynamicMenuItem ctl00_mainMenu_6 ctl00_mainMenu_0" id="ctl00_mainMenun7ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/mis/WebResource.axd?d=k25ctVcKACfH6ogyRPkhENCgJw1T0_eEKyQLKcystG159e_h0a7TLoGAZFaxOrU8EMoiByIZUe7BhDYcvIxgu3q7C-kudNvbp-c9wud72sM1&amp;t=636776922783889403" alt="Scroll up" />
+	</div><div class="DynamicMenuItem ctl00_mainMenu_6 ctl00_mainMenu_0" id="ctl00_mainMenun7ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/mis/WebResource.axd?d=Ez9wEUWQl5VNcWbA1jjpkUFrL3PgtK_f8v6QwCwFCHHf1fMip4679AGkW07Ts3wE56VrRydKmy7I2QnIYQjIl4OAlYlHoCVyjzG7iSTAVVg1&amp;t=636776922783889403" alt="Scroll down" />
+	</div>
+</div><div id="ctl00_mainMenun2Items" class="ctl00_mainMenu_0">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mainMenun9">
+			<td><table class="DynamicMenuItem ctl00_mainMenu_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_mainMenu_1 DynamicMenuItem ctl00_mainMenu_5" href="#" style="border-style:none;font-size:1em;cursor:text;">
+                            Transaction
+                        </a></td><td style="width:0;"><img src="/mis/WebResource.axd?d=ful_p9chnA33eZjzvkJCWUvMOpAB5G_Q8-RJgy0QbkkQWgrHZvMoqBYwA6ZS_Pg589JMftU17GRCAMhPD9oWRIcqiNd9KvVcaNi50SVR3ak1&amp;t=636776922783889403" alt="Expand Transaction" style="border-style:none;vertical-align:middle;" /></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table><div class="DynamicMenuItem ctl00_mainMenu_6 ctl00_mainMenu_0" id="ctl00_mainMenun2ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/mis/WebResource.axd?d=k25ctVcKACfH6ogyRPkhENCgJw1T0_eEKyQLKcystG159e_h0a7TLoGAZFaxOrU8EMoiByIZUe7BhDYcvIxgu3q7C-kudNvbp-c9wud72sM1&amp;t=636776922783889403" alt="Scroll up" />
+	</div><div class="DynamicMenuItem ctl00_mainMenu_6 ctl00_mainMenu_0" id="ctl00_mainMenun2ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/mis/WebResource.axd?d=Ez9wEUWQl5VNcWbA1jjpkUFrL3PgtK_f8v6QwCwFCHHf1fMip4679AGkW07Ts3wE56VrRydKmy7I2QnIYQjIl4OAlYlHoCVyjzG7iSTAVVg1&amp;t=636776922783889403" alt="Scroll down" />
+	</div>
+</div><div id="ctl00_mainMenun9Items" class="ctl00_mainMenu_0">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="ctl00_mainMenun10">
+			<td><table class="DynamicMenuItem ctl00_mainMenu_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_mainMenu_1 DynamicMenuItem ctl00_mainMenu_5" href="Eapplication.aspx?pageno=1380" style="border-style:none;font-size:1em;">
+                            E-Application
+                        </a></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table><div class="DynamicMenuItem ctl00_mainMenu_6 ctl00_mainMenu_0" id="ctl00_mainMenun9ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/mis/WebResource.axd?d=k25ctVcKACfH6ogyRPkhENCgJw1T0_eEKyQLKcystG159e_h0a7TLoGAZFaxOrU8EMoiByIZUe7BhDYcvIxgu3q7C-kudNvbp-c9wud72sM1&amp;t=636776922783889403" alt="Scroll up" />
+	</div><div class="DynamicMenuItem ctl00_mainMenu_6 ctl00_mainMenu_0" id="ctl00_mainMenun9ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/mis/WebResource.axd?d=Ez9wEUWQl5VNcWbA1jjpkUFrL3PgtK_f8v6QwCwFCHHf1fMip4679AGkW07Ts3wE56VrRydKmy7I2QnIYQjIl4OAlYlHoCVyjzG7iSTAVVg1&amp;t=636776922783889403" alt="Scroll down" />
+	</div>
+</div><a id="ctl00_mainMenu_SkipLink"></a>
+                </td>
+            </tr>
+        </table>
+        <div style="padding: 0px 2px 20px 2px;">
+            
+       <div style="z-index: 1; position: absolute; top: 316px; left: 589px;">
+        <div id="ctl00_ContentPlaceHolder1_updProg" style="display:none;">
+	
+                <div style="width: 220px; background-color: Aqua; padding-left: 5px">
+                    <img src="../../IMAGES/ajax-loader.gif" alt="Loading" />
+                    Please Wait..
+                </div>
+            
+</div>
+    </div>
+    <script src="../../JAVASCRIPTS/JScriptAdmin_Module.js" type="text/javascript"></script>
+    <div id="ctl00_ContentPlaceHolder1_UpdatePanel1">
+	
+           <br />
+
+            <fieldset class="fieldset" style="width: 80%; padding-left: 20px; padding-right: 20px;">
+                <legend class="legend">Create Complaint</legend>
+                <table width="100%" cellpadding="2" cellspacing="2">
+                    <tr>
+                        <td colspan="5">
+                            <div id="ctl00_ContentPlaceHolder1_Panel1">
+		
+                                <fieldset class="fieldset">
+                                    <table width="100%" cellpadding="2" cellspacing="2">
+                                        <tr>
+                                            <td class="form_left_label" style="width: 15%;">Complaint Date <span style="color: #FF0000; font-weight: bold">*</span>
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 30%;">
+                                                <span id="ctl00_ContentPlaceHolder1_lblsample" style="color:Black;font-family:Verdana;font-size:8pt;"></span>
+                                                <input name="ctl00$ContentPlaceHolder1$txtComplaintDate" type="text" value="11/06/2019 11:01:24" id="ctl00_ContentPlaceHolder1_txtComplaintDate" disabled="disabled" readonly="true" style="font-family:Verdana;font-size:9pt;height:16px;" />
+                                                &nbsp;
+                                                
+                                            </td>
+                                            <td style="width: 5%"></td>
+
+
+                                            <td class="form_left_label" style="width: 15%;">Name of Complainer
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 31%;">
+                                                <input name="ctl00$ContentPlaceHolder1$txtName" type="text" value="ADITI CHATURVEDI" maxlength="20" readonly="readonly" id="ctl00_ContentPlaceHolder1_txtName" style="font-family:Verdana;font-size:9pt;height:16px;width:300px;" />
+                                                <span id="ctl00_ContentPlaceHolder1_rfvName" style="color:Red;font-family:Verdana;font-size:8pt;display:none;"></span>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="form_left_label" style="width: 15%;">Department <span style="color: #FF0000; font-weight: bold">*</span>
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 30%;">
+                                                <select name="ctl00$ContentPlaceHolder1$ddlRMDept" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlRMDept\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl00_ContentPlaceHolder1_ddlRMDept" tabindex="1" style="font-family:Verdana;font-size:9pt;height:24px;width:307px;">
+			<option selected="selected" value="-1">Please Select</option>
+			<option value="6">Dean of Academic Affair</option>
+			<option value="5">Dean of Research and Consultancy </option>
+			<option value="4">Registrar</option>
+			<option value="3">Chief Warden</option>
+			<option value="2">Finance</option>
+			<option value="1">Maintenance </option>
+
+		</select>
+                                                <span id="ctl00_ContentPlaceHolder1_rfvRMDept" style="color:Red;font-family:Verdana;font-size:8pt;display:none;"></span>
+                                            </td>
+                                            <td style="width: 5%"></td>
+                                            <td class="form_left_label" style="width: 15%;">Complaint No.
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 31%;">
+                                                <input name="ctl00$ContentPlaceHolder1$txtComplaintNo" type="text" readonly="readonly" id="ctl00_ContentPlaceHolder1_txtComplaintNo" style="font-family:Verdana;font-size:9pt;height:16px;width:300px;" />
+                                                <span id="ctl00_ContentPlaceHolder1_rfvCompNo" style="color:Red;font-family:Verdana;font-size:8pt;display:none;"></span>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="form_left_label" style="width: 15%;">Complaint To <span style="color: #FF0000; font-weight: bold">*</span>
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 30%;">
+                                                <select name="ctl00$ContentPlaceHolder1$ddlRMCompTo" id="ctl00_ContentPlaceHolder1_ddlRMCompTo" tabindex="2" style="font-family:Verdana;font-size:9pt;height:24px;width:307px;">
+
+		</select>
+                                                <span id="ctl00_ContentPlaceHolder1_rfvRMV" style="color:Red;font-family:Verdana;font-size:8pt;display:none;"></span>
+                                            </td>
+                                            <td style="width: 5%"></td>
+
+                                            <td class="form_left_label" style="width: 15%;">Complaint Type <span style="color: #FF0000; font-weight: bold">*</span>
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 30%;">
+                                                <select name="ctl00$ContentPlaceHolder1$ddlCompNature" id="ctl00_ContentPlaceHolder1_ddlCompNature" tabindex="3" style="font-family:Verdana;font-size:9pt;height:24px;width:307px;">
+			<option value="-1">Please Select</option>
+
+		</select>
+                                                <span id="ctl00_ContentPlaceHolder1_rfvCompNature" style="color:Red;font-family:Verdana;font-size:8pt;display:none;"></span>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <td class="form_left_label" style="width: 15%;">Complaint Details <span style="color: #FF0000; font-weight: bold">*</span>
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 31%;">
+                                                <textarea name="ctl00$ContentPlaceHolder1$txtDetails" rows="2" cols="20" id="ctl00_ContentPlaceHolder1_txtDetails" tabindex="4" style="font-family:Verdana;font-size:9pt;height:50px;width:300px;">
+</textarea>
+                                                <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator2" style="color:Red;font-family:Verdana;font-size:8pt;display:none;"></span>
+                                                
+                                            </td>
+                                            <td style="width: 5%"></td>
+
+                                            <td class="form_left_label" style="width: 15%;"></td>
+                                            <td style="width: 2%"></td>
+                                            <td class="form_left_text" style="width: 31%;"></td>
+
+
+                                            
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                            
+	</div>
+                            <br />
+                        </td>
+                    </tr>
+
+                    <tr id="ctl00_ContentPlaceHolder1_stuInfo">
+		<td colspan="5">
+                            <div id="ctl00_ContentPlaceHolder1_Panel3">
+			
+                                <fieldset class="fieldset">
+                                    <table width="100%" cellpadding="2" cellspacing="2">
+                                        <tr>
+                                            <td class="form_left_label" style="width: 8%;">Roll No.
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 12%;">
+                                                <span id="ctl00_ContentPlaceHolder1_lblRollNo" style="color:Black;font-family:Verdana;font-size:8pt;">17UCC006</span>
+                                            </td>
+                                            <td style="width: 5%"></td>
+
+
+                                            <td class="form_left_label" style="width: 8%;">Mobile No 
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 12%;">
+                                                <span id="ctl00_ContentPlaceHolder1_lblMobileNo" style="color:Black;font-family:Verdana;font-size:8pt;">919983129216</span>
+                                            </td>
+                                            <td style="width: 5%"></td>
+
+
+                                            <td class="form_left_label" style="width: 8%;">Email ID 
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 12%;">
+                                                <span id="ctl00_ContentPlaceHolder1_lblEmailID" style="color:Black;font-family:Verdana;font-size:8pt;">arunkumar60000@gmail.com</span>
+                                            </td>
+                                            <td style="width: 5%"></td>
+
+
+                                            <td class="form_left_label" style="width: 8%;">Branch
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 12%;">
+                                                <span id="ctl00_ContentPlaceHolder1_lblBranch" style="color:Black;font-family:Verdana;font-size:8pt;">CCE</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                            
+		</div>
+
+                        </td>
+	</tr>
+	
+
+                    <tr>
+                        <td colspan="5">
+                            <br />
+                            <div id="ctl00_ContentPlaceHolder1_Panel2">
+		
+                                <fieldset class="fieldset">
+                                    <table width="100%" cellpadding="2" cellspacing="2">
+                                        <tr>
+                                            <td class="form_left_label" style="width: 15%;">Location <span style="color: #FF0000; font-weight: bold">*</span>
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 30%;">
+                                                <select name="ctl00$ContentPlaceHolder1$ddlArea" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlArea\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl00_ContentPlaceHolder1_ddlArea" tabindex="6" style="font-family:Verdana;font-size:9pt;height:24px;width:307px;">
+			<option selected="selected" value="0">Please Select</option>
+			<option value="17">BH-1</option>
+			<option value="18">BH-2</option>
+			<option value="19">BH 3</option>
+			<option value="20">GH</option>
+			<option value="21">Faculty/Staff Quarters</option>
+			<option value="22">Guest House</option>
+			<option value="23">Lecture Hall Complex</option>
+			<option value="24">Academic Block</option>
+			<option value="25">Main Gate 1</option>
+			<option value="26">Main Gate 2</option>
+			<option value="27">Sports Complex Area</option>
+			<option value="28">Medical Unit</option>
+			<option value="29">Shopping Complex</option>
+			<option value="30">Mess A</option>
+			<option value="31">Mess B</option>
+			<option value="32">Play Ground</option>
+			<option value="33">External Infrastructure</option>
+			<option value="34">MME Workshop</option>
+			<option value="35">MME Building</option>
+			<option value="37">Central Library</option>
+			<option value="38">Maintenance Store</option>
+			<option value="39">Material Synthesis Lab</option>
+			<option value="40">Admission Cell</option>
+			<option value="42">Balji Vihar Apartments</option>
+			<option value="43">Faculty Offices</option>
+			<option value="44">Sub-Station</option>
+
+		</select>
+                                                <span id="ctl00_ContentPlaceHolder1_rfvArea" style="color:Red;font-family:Verdana;font-size:8pt;display:none;"></span>
+                                            </td>
+                                            <td style="width: 5%"></td>
+
+
+                                            <td class="form_left_label" style="width: 15%;">Location/Site of Complaint <span style="color: #FF0000; font-weight: bold">*</span>
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 31%;">
+                                                <input name="ctl00$ContentPlaceHolder1$txtLocation" type="text" maxlength="30" id="ctl00_ContentPlaceHolder1_txtLocation" disabled="disabled" tabindex="7" style="font-family:Verdana;font-size:9pt;height:16px;width:300px;" />
+                                                <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator3" style="color:Red;font-family:Verdana;font-size:8pt;display:none;"></span>
+                                                
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td class="form_left_label" style="width: 15%;">Contact Number <span style="color: #FF0000; font-weight: bold">*</span>
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 30%;">
+                                                <input name="ctl00$ContentPlaceHolder1$txtContactNo" type="text" value="919983129216" maxlength="10" id="ctl00_ContentPlaceHolder1_txtContactNo" tabindex="8" style="font-family:Verdana;font-size:9pt;height:16px;width:175px;" />
+                                                <span id="ctl00_ContentPlaceHolder1_rfvtxtphonenumber" style="color:Red;font-family:Verdana;font-size:8pt;display:none;"></span>
+                                                
+                                            </td>
+                                            <td style="width: 5%"></td>
+
+
+                                            <td class="form_left_label" style="width: 15%;">Alternate Number 
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 31%;">
+                                                <input name="ctl00$ContentPlaceHolder1$txtContactNoOther" type="text" maxlength="10" id="ctl00_ContentPlaceHolder1_txtContactNoOther" tabindex="9" style="font-family:Verdana;font-size:9pt;height:16px;width:175px;" />
+                                                
+                                                
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="form_left_label" style="width: 15%;">Preferable Date for Visit / Contact <span style="color: #FF0000; font-weight: bold">*</span>
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 30%;">
+                                                <input name="ctl00$ContentPlaceHolder1$txtEnterDate" type="text" id="ctl00_ContentPlaceHolder1_txtEnterDate" tabindex="10" style="font-family:Verdana;font-size:9pt;height:16px;width:175px;" />
+                                                &nbsp;<img id="ctl00_ContentPlaceHolder1_ImaCalStartDate" src="../../images/calendar.png" style="border-width:0px;cursor: pointer" />
+                                                
+                                                <input type="hidden" name="ctl00$ContentPlaceHolder1$meReqdate_ClientState" id="ctl00_ContentPlaceHolder1_meReqdate_ClientState" />
+                                                <span id="ctl00_ContentPlaceHolder1_mevIndDate" style="color:Red;display:none;"></span>
+                                                <span id="ctl00_ContentPlaceHolder1_rfvPreDate" style="color:Red;font-family:Verdana;font-size:8pt;display:none;"></span>
+                                            </td>
+                                            <td style="width: 5%"></td>
+                                            <td class="form_left_label" style="width: 15%;">Preferable Time From <span style="color: #FF0000; font-weight: bold">*</span>
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+
+                                            <td class="form_left_text" style="width: 31%;">
+                                                <input name="ctl00$ContentPlaceHolder1$txtEnterTime" type="text" id="ctl00_ContentPlaceHolder1_txtEnterTime" tabindex="11" style="font-family:Verdana;font-size:9pt;height:14px;width:100px;" />&nbsp;&nbsp;<span style="font-style: italic; font-size: smaller"></span>
+                                                <input type="hidden" name="ctl00$ContentPlaceHolder1$meeEnterTime_ClientState" id="ctl00_ContentPlaceHolder1_meeEnterTime_ClientState" />
+                                                <span id="ctl00_ContentPlaceHolder1_mevEnterTime" style="color:Red;display:none;"></span>
+                                            </td>
+                                            <td class="form_left_label" style="width: 15%;">Preferable Time To <span style="color: #FF0000; font-weight: bold">*</span>
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 31%;">&nbsp;&nbsp;<span style="font-style: italic; font-size: smaller">
+                                                <input name="ctl00$ContentPlaceHolder1$txtEnterTimeTo" type="text" id="ctl00_ContentPlaceHolder1_txtEnterTimeTo" tabindex="11" style="font-family:Verdana;font-size:9pt;height:14px;width:100px;" />
+                                            </span>
+                                                <input type="hidden" name="ctl00$ContentPlaceHolder1$meeEnterTimeTo_ClientState" id="ctl00_ContentPlaceHolder1_meeEnterTimeTo_ClientState" />
+                                                <span id="ctl00_ContentPlaceHolder1_mevEnterTimeTo" style="color:Red;display:none;"></span>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="form_left_label" style="width: 15%;">OTP <span style="color: #FF0000; font-weight: bold">*</span>
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 30%;">
+                                                <input name="ctl00$ContentPlaceHolder1$txtOPT" type="text" maxlength="10" id="ctl00_ContentPlaceHolder1_txtOPT" tabindex="12" title="Enter OTP" placeholder="Enter OTP" style="font-family:Verdana;font-size:9pt;width:175px;" />
+                                                
+                                                <span id="ctl00_ContentPlaceHolder1_rfvOPT" style="color:Red;font-family:Verdana;font-size:8pt;display:none;"></span>
+                                            </td>
+                                            <td style="width: 5%"></td>
+                                            <td class="form_left_label" style="width: 15%;"></td>
+                                            <td style="width: 2%"></td>
+                                            <td class="form_left_text" style="width: 31%;">
+                                                
+                                            </td>
+                                        </tr>
+
+                                        
+
+                                    </table>
+                                </fieldset>
+                            
+	</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="5">
+                            <br />
+                            <div id="ctl00_ContentPlaceHolder1_Panel4">
+		
+                                <fieldset class="fieldset">
+                                    <table width="100%" cellpadding="2" cellspacing="2">
+                                        <tr>
+                                            <td class="form_left_label" style="width: 1%;"></td>
+                                            <td valign="top" style="width: 1%"></td>
+                                            <td class="form_left_text" style="width: 39%;">
+                                                <span style="color: #FF0000">Valid files : (.jpg, .bmp, .gif, .png, .pdf, .xls, .doc,.zip, .txt, .docx, .xlsx)</span>
+                                            </td>
+
+                                            <td class="form_left_label" style="width: 15%;"></td>
+                                            <td valign="top" style="width: 1%"></td>
+                                            <td class="form_left_text" style="width: 30%;"></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="form_left_label" style="width: 15%;">Attach File
+                                            </td>
+                                            <td style="width: 2%">
+                                                <b>:</b>
+                                            </td>
+                                            <td class="form_left_text" style="width: 30%;">
+                                                <div id="ctl00_ContentPlaceHolder1_UpdatePanel3">
+			
+                                                        <input type="file" name="ctl00$ContentPlaceHolder1$FileUpload1" id="ctl00_ContentPlaceHolder1_FileUpload1" tabindex="20" title="Select file to upload" ValidationGroup="complaint" />
+                                                        &nbsp;<input type="submit" name="ctl00$ContentPlaceHolder1$btnAdd" value="Add" id="ctl00_ContentPlaceHolder1_btnAdd" tabindex="21" class="buttonStyle ui-corner-all" style="font-family:Verdana;font-size:8pt;" />
+                                                        <span id="ctl00_ContentPlaceHolder1_lblResult" style="color:Black;font-family:Verdana;font-size:8pt;font-weight:bold;"></span>
+                                                    
+		</div>
+                                            </td>
+                                            <td style="width: 5%"></td>
+
+
+                                            <td class="form_left_label" style="width: 15%;"></td>
+                                            <td style="width: 2%"></td>
+                                            <td class="form_left_text" style="width: 31%;"></td>
+                                        </tr>
+                                    </table>
+
+                                    <br />
+                                    
+                                </fieldset>
+                            
+	</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="5" style="text-align: center;">
+                             
+                             <div id="ctl00_ContentPlaceHolder1_updResultProcess">
+		
+                        
+                           
+                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnGenerateOTP" value="Generate OTP" id="ctl00_ContentPlaceHolder1_btnGenerateOTP" tabindex="12" title="Click here to Generate OTP" class="buttonStyle ui-corner-all" style="font-family:Verdana;font-size:8pt;" />
+                            &nbsp;
+                              <input type="submit" name="ctl00$ContentPlaceHolder1$btnSave" value="Save" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnSave&quot;, &quot;&quot;, true, &quot;complaint&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnSave" tabindex="13" class="buttonStyle ui-corner-all" style="font-family:Verdana;font-size:8pt;width:100px;" />
+                            &nbsp;                       
+                         <input type="submit" name="ctl00$ContentPlaceHolder1$btnCancel" value="Cancel" id="ctl00_ContentPlaceHolder1_btnCancel" tabindex="14" class="buttonStyle ui-corner-all" style="font-family:Verdana;font-size:8pt;width:100px;" />
+                            &nbsp;
+                        
+                        <div id="ctl00_ContentPlaceHolder1_ValidationSummary1" style="color:Red;font-family:Verdana;font-size:8pt;font-weight:normal;height:38px;display:none;">
+
+		</div>
+                        
+                    
+	</div>
+                        </td>
+                    
+
+                    </tr>
+                            
+                </table>
+                     
+                
+
+            </fieldset>
+                        
+                           
+
+            <br />
+            <table cellpadding="2" cellspacing="2" border="0" width="96%">
+                <tr>
+                    <td colspan="2" align="center">
+                        
+                                <div id="demo-grid" class="vista-grid">
+                                    <div class="titlebar">Complaint Entry List</div>
+                                    <table class="datatable" cellpadding="0" cellspacing="0" width="100%%">
+                                        <tr class="header">
+                                            <th style="width: 5%;"></th>
+                                            <th style="width: 15%;">COMPLAINT NO.</th>
+                                            <th style="display: none">COMPLAINT ID</th>
+                                            <th style="width: 10%;">COMPLAINT DATE</th>
+                                            <th style="width: 20%;">COMPLAINT DETAILS</th>
+                                            
+                                            <th style="width: 15%;">LOCATION</th>
+                                            <th style="width: 15%;">SITE</th>
+
+                                            <th style="width: 5%;">STATUS</th>
+                                            <th style="width: 10%;">DEPARTMENT</th>
+                                            <th style="width: 20%;">Action Taken</th>
+                                        </tr>
+                                        
+                                <tr class="item" onmouseover="this.style.backgroundColor='#FFFFAA'" onmouseout="this.style.backgroundColor='#FFFFFF'">
+                                    <td style="width: 5%;">
+                                        
+                                    </td>
+                                    <td style="width: 15%;">MAN/2018-2019 I/27-08-2018/5233</td>
+                                    <td style="display: none">5233</td>
+                                    <td style="width: 10%;">27/08/2018 23:27:23</td>
+                                    <td style="width: 20%;">my windows net is broken which leads to mosquitos inside my room and secondly my doors lock is broken which makes us difficult to lock and open it and thirdly there is a huge gap between the glass window above the door and wall which leads to lizards enter our room        so please repair these things as soon as possible</td>
+                                    
+                                    <td style="width: 15%;">GH</td>
+                                    <td style="width: 15%;">B-211</td>
+
+                                    <td style="width: 5%;">COMPLETE</td>
+                                    <td style="width: 10%;">Maintenance </td>
+                                    <td style="width: 20%;">Ajay</td>
+                                </tr>
+                            
+                                    </table>
+                                </div>
+                            
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="vista-grid_datapager">
+                            <span id="ctl00_ContentPlaceHolder1_dpPager"><a disabled="disabled" class="a">Previous</a>&nbsp;<span style="color:Black;font-family:Verdana;font-size:8pt;">1</span>&nbsp;<a disabled="disabled" class="a">Next</a>&nbsp;</span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        
+</div>
+
+
+    
+    
+    
+    <div id="ctl00_ContentPlaceHolder1_div" class="modalPopup" style="display: none">
+	
+        <div style="text-align: center">
+            <table>
+                <tr>
+                    <td align="center">
+                        <img id="ctl00_ContentPlaceHolder1_imgWarning" src="../../images/warning.gif" style="border-width:0px;" />
+                    </td>
+                    <td>&nbsp;&nbsp;Are you sure you want to delete this record?
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnOkDel" value="Yes" id="ctl00_ContentPlaceHolder1_btnOkDel" class="buttonStyle ui-corner-all" style="font-family:Verdana;font-size:8pt;width:50px;" />
+                        <input type="submit" name="ctl00$ContentPlaceHolder1$btnNoDel" value="No" id="ctl00_ContentPlaceHolder1_btnNoDel" class="buttonStyle ui-corner-all" style="font-family:Verdana;font-size:8pt;width:50px;" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    
+</div>
+    <script type="text/javascript">
+        //  keeps track of the delete button for the row
+        //  that is going to be removed
+        var _source;
+        // keep track of the popup div
+        var _popup;
+
+        function showConfirmDel(source) {
+            this._source = source;
+            this._popup = $find('mdlPopupDel');
+
+            //  find the confirm ModalPopup and show it    
+            this._popup.show();
+        }
+
+        function okDelClick() {
+            //  find the confirm ModalPopup and hide it    
+            this._popup.hide();
+            //  use the cached button as the postback source
+            __doPostBack(this._source.name, '');
+        }
+
+        function cancelDelClick() {
+            //  find the confirm ModalPopup and hide it 
+            this._popup.hide();
+            //  clear the event source
+            this._source = null;
+            this._popup = null;
+        }
+    </script>
+    
+
+        </div>
+        <div id="ctl00_updpnlError">
+	
+                <input type="submit" name="ctl00$hiddenTargetControlForModalPopup" value="" id="ctl00_hiddenTargetControlForModalPopup" class="buttonStyle ui-corner-all" style="font-family:Verdana;font-size:8pt;display: none" />
+                
+                <div id="ctl00_programmaticPopup" class="modalPopup" style="display: none; width: 350px; padding: 10px; text-align: center">
+		
+                    <div id="ctl00_programmaticPopupDragHandle" class="errModalPopupHandle">
+			
+                        Error
+                    
+		</div>
+                    <div id="ctl00_pnlErr" class="errModalPopupData" style="height:450px;overflow:scroll;">
+			
+                        <span id="ctl00_lblError" style="color:Black;font-family:Verdana;font-size:8pt;"></span><br />
+                        <br />
+                    
+		</div>
+                    <input type="submit" name="ctl00$btnNo" value="Close" id="ctl00_btnNo" class="buttonStyle ui-corner-all" style="font-family:Verdana;font-size:8pt;" />
+                    <br />
+                
+	</div>
+            
+</div>
+
+         
+        <h3 style="display:none">Session Idle:&nbsp;<span id="secondsIdle"></span>&nbsp;seconds.</h3>
+        <a id="ctl00_lnkFake" class="a" href="javascript:__doPostBack(&#39;ctl00$lnkFake&#39;,&#39;&#39;)"></a>
+
+        
+        <div id="ctl00_pnlPopup" class="modalPopup">
+	 
+            <div class="header">
+                Session Expiring!
+            </div>
+            <div class="body">
+                Your Session will expire in&nbsp;<span id="seconds"></span>&nbsp;seconds.<br />
+                Do you want to reset?
+            </div>
+            <div class="footer" align="right">
+                <input type="submit" name="ctl00$btnsYes" value="Yes" id="ctl00_btnsYes" class="buttonStyle ui-corner-all" style="font-family:Verdana;font-size:8pt;" />
+                <input type="submit" name="ctl00$btnsNo" value="No" id="ctl00_btnsNo" class="buttonStyle ui-corner-all" style="font-family:Verdana;font-size:8pt;" />
+            </div>
+        
+</div>
+
+        <script type="text/javascript">
+            function SessionExpireAlert(timeout) {
+                var seconds = timeout / 1000;
+                document.getElementsByName("secondsIdle").innerHTML = seconds;
+                document.getElementsByName("seconds").innerHTML = seconds;
+                setInterval(function () {
+                    seconds--;
+                    document.getElementById("seconds").innerHTML = seconds;
+                    document.getElementById("secondsIdle").innerHTML = seconds;
+                }, 1000);
+                setTimeout(function () {
+                    //Show Popup before 20 seconds of timeout.
+                    $find("mpeTimeout").show();
+                }, timeout - 60 * 1000);
+                setTimeout(function () {
+                    window.location = "/mis/default.aspx";
+                   // window.location = "/PresentationLayer/default.aspx";
+                   // window.location = "/mistest/default.aspx";
+                }, timeout);
+            };
+            function ResetSession() {
+                window.location = window.location.href;
+            }
+        </script>
+
+        
+
+
+        <script type="text/javascript">
+            function cancelClickErr() {
+                //        var _popup;
+                //        //  find the confirm ModalPopup and hide it 
+                //        this._popup = $find('programmaticModalPopupBehavior');            
+                //        this._popup.hide();
+                //        this._popup = null;
+            }
+        </script>
+
+        
+       
+
+        <script type="text/javascript" language="javascript">
+            function showglobclk() {
+                obj = document.getElementById('globalSubNav');
+                obj.style.display = (obj.style.display == 'block') ? 'none' : 'block';
+                return false;
+            }
+
+            function showglobnav() {
+                obj = document.getElementById('globalSubNav');
+                obj.style.display = 'block';
+                return false;
+            }
+
+            function hideglobnav() {
+                obj = document.getElementById('globalSubNav');
+                obj.style.display = 'none';
+                return false;
+            }
+        </script>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("ctl00_ContentPlaceHolder1_ValidationSummary1"));
+var Page_Validators =  new Array(document.getElementById("ctl00_ContentPlaceHolder1_rfvName"), document.getElementById("ctl00_ContentPlaceHolder1_rfvRMDept"), document.getElementById("ctl00_ContentPlaceHolder1_rfvCompNo"), document.getElementById("ctl00_ContentPlaceHolder1_rfvRMV"), document.getElementById("ctl00_ContentPlaceHolder1_rfvCompNature"), document.getElementById("ctl00_ContentPlaceHolder1_RequiredFieldValidator2"), document.getElementById("ctl00_ContentPlaceHolder1_rfvArea"), document.getElementById("ctl00_ContentPlaceHolder1_RequiredFieldValidator3"), document.getElementById("ctl00_ContentPlaceHolder1_rfvtxtphonenumber"), document.getElementById("ctl00_ContentPlaceHolder1_mevIndDate"), document.getElementById("ctl00_ContentPlaceHolder1_rfvPreDate"), document.getElementById("ctl00_ContentPlaceHolder1_mevEnterTime"), document.getElementById("ctl00_ContentPlaceHolder1_mevEnterTimeTo"), document.getElementById("ctl00_ContentPlaceHolder1_rfvOPT"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_ContentPlaceHolder1_mevIndDate = document.all ? document.all["ctl00_ContentPlaceHolder1_mevIndDate"] : document.getElementById("ctl00_ContentPlaceHolder1_mevIndDate");
+ctl00_ContentPlaceHolder1_mevIndDate.IsMaskedEdit = "true";
+ctl00_ContentPlaceHolder1_mevIndDate.ValidEmpty = "true";
+ctl00_ContentPlaceHolder1_mevIndDate.MaximumValue = "";
+ctl00_ContentPlaceHolder1_mevIndDate.MinimumValue = "";
+ctl00_ContentPlaceHolder1_mevIndDate.InitialValue = "";
+ctl00_ContentPlaceHolder1_mevIndDate.ValidationExpression = "";
+ctl00_ContentPlaceHolder1_mevIndDate.ClientValidationFunction = "";
+ctl00_ContentPlaceHolder1_mevIndDate.TargetValidator = "ctl00_ContentPlaceHolder1_txtEnterDate";
+ctl00_ContentPlaceHolder1_mevIndDate.EmptyValueMessage = "Please Enter Preferable date";
+ctl00_ContentPlaceHolder1_mevIndDate.EmptyValueText = "Empty";
+ctl00_ContentPlaceHolder1_mevIndDate.MaximumValueMessage = "";
+ctl00_ContentPlaceHolder1_mevIndDate.MaximumValueText = "";
+ctl00_ContentPlaceHolder1_mevIndDate.MinimumValueMessage = "";
+ctl00_ContentPlaceHolder1_mevIndDate.MinimumValueText = "";
+ctl00_ContentPlaceHolder1_mevIndDate.InvalidValueMessage = "Preferable date is Invalid (Enter dd/MM/yyyy Format)";
+ctl00_ContentPlaceHolder1_mevIndDate.InvalidValueText = "Invalid Date";
+ctl00_ContentPlaceHolder1_mevIndDate.InvalidValueCssClass = "MaskedEditError";
+ctl00_ContentPlaceHolder1_mevIndDate.CssBlurNegative = "MaskedEditBlurNegative";
+ctl00_ContentPlaceHolder1_mevIndDate.CssFocus = "MaskedEditFocus";
+ctl00_ContentPlaceHolder1_mevIndDate.CssFocusNegative = "MaskedEditFocusNegative";
+ctl00_ContentPlaceHolder1_mevIndDate.TooltipMessage = "Please Enter Date";
+ctl00_ContentPlaceHolder1_mevIndDate.FirstMaskPosition = "0";
+ctl00_ContentPlaceHolder1_mevIndDate.DateSeparator = "/";
+ctl00_ContentPlaceHolder1_mevIndDate.DateFormat = "DMY";
+ctl00_ContentPlaceHolder1_mevIndDate.Century = "1900";
+ctl00_ContentPlaceHolder1_mevIndDate.evaluationfunction = "MaskedEditValidatorDate";
+ctl00_ContentPlaceHolder1_mevIndDate.LastMaskPosition = "11";
+ctl00_ContentPlaceHolder1_mevIndDate.controltovalidate = "ctl00_ContentPlaceHolder1_txtEnterDate";
+ctl00_ContentPlaceHolder1_mevIndDate.focusOnError = "t";
+ctl00_ContentPlaceHolder1_mevIndDate.errormessage = "mevIndDate";
+ctl00_ContentPlaceHolder1_mevIndDate.display = "None";
+ctl00_ContentPlaceHolder1_mevIndDate.validationGroup = "complaint";
+var ctl00_ContentPlaceHolder1_mevEnterTime = document.all ? document.all["ctl00_ContentPlaceHolder1_mevEnterTime"] : document.getElementById("ctl00_ContentPlaceHolder1_mevEnterTime");
+ctl00_ContentPlaceHolder1_mevEnterTime.IsMaskedEdit = "true";
+ctl00_ContentPlaceHolder1_mevEnterTime.ValidEmpty = "false";
+ctl00_ContentPlaceHolder1_mevEnterTime.MaximumValue = "";
+ctl00_ContentPlaceHolder1_mevEnterTime.MinimumValue = "";
+ctl00_ContentPlaceHolder1_mevEnterTime.InitialValue = "";
+ctl00_ContentPlaceHolder1_mevEnterTime.ValidationExpression = "";
+ctl00_ContentPlaceHolder1_mevEnterTime.ClientValidationFunction = "";
+ctl00_ContentPlaceHolder1_mevEnterTime.TargetValidator = "ctl00_ContentPlaceHolder1_txtEnterTime";
+ctl00_ContentPlaceHolder1_mevEnterTime.EmptyValueMessage = "Please Enter Preferable Time.";
+ctl00_ContentPlaceHolder1_mevEnterTime.EmptyValueText = "*";
+ctl00_ContentPlaceHolder1_mevEnterTime.MaximumValueMessage = "";
+ctl00_ContentPlaceHolder1_mevEnterTime.MaximumValueText = "";
+ctl00_ContentPlaceHolder1_mevEnterTime.MinimumValueMessage = "";
+ctl00_ContentPlaceHolder1_mevEnterTime.MinimumValueText = "";
+ctl00_ContentPlaceHolder1_mevEnterTime.InvalidValueMessage = "Time is invalid";
+ctl00_ContentPlaceHolder1_mevEnterTime.InvalidValueText = "*";
+ctl00_ContentPlaceHolder1_mevEnterTime.InvalidValueCssClass = "MaskedEditError";
+ctl00_ContentPlaceHolder1_mevEnterTime.CssBlurNegative = "MaskedEditBlurNegative";
+ctl00_ContentPlaceHolder1_mevEnterTime.CssFocus = "MaskedEditFocus";
+ctl00_ContentPlaceHolder1_mevEnterTime.CssFocusNegative = "MaskedEditFocusNegative";
+ctl00_ContentPlaceHolder1_mevEnterTime.TooltipMessage = "Input a time";
+ctl00_ContentPlaceHolder1_mevEnterTime.FirstMaskPosition = "0";
+ctl00_ContentPlaceHolder1_mevEnterTime.TimeSeparator = ":";
+ctl00_ContentPlaceHolder1_mevEnterTime.AmPmSymbol = "AM;PM";
+ctl00_ContentPlaceHolder1_mevEnterTime.evaluationfunction = "MaskedEditValidatorTime";
+ctl00_ContentPlaceHolder1_mevEnterTime.LastMaskPosition = "15";
+ctl00_ContentPlaceHolder1_mevEnterTime.controltovalidate = "ctl00_ContentPlaceHolder1_txtEnterTime";
+ctl00_ContentPlaceHolder1_mevEnterTime.errormessage = "mevEnterTime";
+ctl00_ContentPlaceHolder1_mevEnterTime.display = "None";
+ctl00_ContentPlaceHolder1_mevEnterTime.validationGroup = "complaint";
+var ctl00_ContentPlaceHolder1_mevEnterTimeTo = document.all ? document.all["ctl00_ContentPlaceHolder1_mevEnterTimeTo"] : document.getElementById("ctl00_ContentPlaceHolder1_mevEnterTimeTo");
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.IsMaskedEdit = "true";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.ValidEmpty = "false";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.MaximumValue = "";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.MinimumValue = "";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.InitialValue = "";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.ValidationExpression = "";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.ClientValidationFunction = "";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.TargetValidator = "ctl00_ContentPlaceHolder1_txtEnterTimeTo";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.EmptyValueMessage = "Please Enter Preferable Time.";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.EmptyValueText = "*";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.MaximumValueMessage = "";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.MaximumValueText = "";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.MinimumValueMessage = "";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.MinimumValueText = "";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.InvalidValueMessage = "Time is invalid";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.InvalidValueText = "*";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.InvalidValueCssClass = "MaskedEditError";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.CssBlurNegative = "MaskedEditBlurNegative";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.CssFocus = "MaskedEditFocus";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.CssFocusNegative = "MaskedEditFocusNegative";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.TooltipMessage = "Input a time";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.FirstMaskPosition = "0";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.TimeSeparator = ":";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.AmPmSymbol = "AM;PM";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.evaluationfunction = "MaskedEditValidatorTime";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.LastMaskPosition = "15";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.controltovalidate = "ctl00_ContentPlaceHolder1_txtEnterTimeTo";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.errormessage = "mevEnterTimeTo";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.display = "None";
+ctl00_ContentPlaceHolder1_mevEnterTimeTo.validationGroup = "complaint";
+var ctl00_ContentPlaceHolder1_rfvName = document.all ? document.all["ctl00_ContentPlaceHolder1_rfvName"] : document.getElementById("ctl00_ContentPlaceHolder1_rfvName");
+ctl00_ContentPlaceHolder1_rfvName.controltovalidate = "ctl00_ContentPlaceHolder1_txtName";
+ctl00_ContentPlaceHolder1_rfvName.errormessage = "Please Enter Name of Complaintee";
+ctl00_ContentPlaceHolder1_rfvName.display = "None";
+ctl00_ContentPlaceHolder1_rfvName.validationGroup = "complaint";
+ctl00_ContentPlaceHolder1_rfvName.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_rfvName.initialvalue = "";
+var ctl00_ContentPlaceHolder1_rfvRMDept = document.all ? document.all["ctl00_ContentPlaceHolder1_rfvRMDept"] : document.getElementById("ctl00_ContentPlaceHolder1_rfvRMDept");
+ctl00_ContentPlaceHolder1_rfvRMDept.controltovalidate = "ctl00_ContentPlaceHolder1_ddlRMDept";
+ctl00_ContentPlaceHolder1_rfvRMDept.errormessage = "Please Select Complaint Department.";
+ctl00_ContentPlaceHolder1_rfvRMDept.display = "None";
+ctl00_ContentPlaceHolder1_rfvRMDept.validationGroup = "complaint";
+ctl00_ContentPlaceHolder1_rfvRMDept.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_rfvRMDept.initialvalue = "-1";
+var ctl00_ContentPlaceHolder1_rfvCompNo = document.all ? document.all["ctl00_ContentPlaceHolder1_rfvCompNo"] : document.getElementById("ctl00_ContentPlaceHolder1_rfvCompNo");
+ctl00_ContentPlaceHolder1_rfvCompNo.controltovalidate = "ctl00_ContentPlaceHolder1_txtComplaintNo";
+ctl00_ContentPlaceHolder1_rfvCompNo.errormessage = "Complaint No. Is Required.";
+ctl00_ContentPlaceHolder1_rfvCompNo.display = "None";
+ctl00_ContentPlaceHolder1_rfvCompNo.validationGroup = "complaint";
+ctl00_ContentPlaceHolder1_rfvCompNo.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_rfvCompNo.initialvalue = "";
+var ctl00_ContentPlaceHolder1_rfvRMV = document.all ? document.all["ctl00_ContentPlaceHolder1_rfvRMV"] : document.getElementById("ctl00_ContentPlaceHolder1_rfvRMV");
+ctl00_ContentPlaceHolder1_rfvRMV.controltovalidate = "ctl00_ContentPlaceHolder1_ddlRMCompTo";
+ctl00_ContentPlaceHolder1_rfvRMV.errormessage = "Please Select Complaint To.";
+ctl00_ContentPlaceHolder1_rfvRMV.display = "None";
+ctl00_ContentPlaceHolder1_rfvRMV.validationGroup = "complaint";
+ctl00_ContentPlaceHolder1_rfvRMV.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_rfvRMV.initialvalue = "-1";
+var ctl00_ContentPlaceHolder1_rfvCompNature = document.all ? document.all["ctl00_ContentPlaceHolder1_rfvCompNature"] : document.getElementById("ctl00_ContentPlaceHolder1_rfvCompNature");
+ctl00_ContentPlaceHolder1_rfvCompNature.controltovalidate = "ctl00_ContentPlaceHolder1_ddlCompNature";
+ctl00_ContentPlaceHolder1_rfvCompNature.errormessage = "Please Select Complaint Nature.";
+ctl00_ContentPlaceHolder1_rfvCompNature.display = "None";
+ctl00_ContentPlaceHolder1_rfvCompNature.validationGroup = "complaint";
+ctl00_ContentPlaceHolder1_rfvCompNature.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_rfvCompNature.initialvalue = "-1";
+var ctl00_ContentPlaceHolder1_RequiredFieldValidator2 = document.all ? document.all["ctl00_ContentPlaceHolder1_RequiredFieldValidator2"] : document.getElementById("ctl00_ContentPlaceHolder1_RequiredFieldValidator2");
+ctl00_ContentPlaceHolder1_RequiredFieldValidator2.controltovalidate = "ctl00_ContentPlaceHolder1_txtDetails";
+ctl00_ContentPlaceHolder1_RequiredFieldValidator2.errormessage = "Please Enter Complaint Details.";
+ctl00_ContentPlaceHolder1_RequiredFieldValidator2.display = "None";
+ctl00_ContentPlaceHolder1_RequiredFieldValidator2.validationGroup = "complaint";
+ctl00_ContentPlaceHolder1_RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_RequiredFieldValidator2.initialvalue = "";
+var ctl00_ContentPlaceHolder1_rfvArea = document.all ? document.all["ctl00_ContentPlaceHolder1_rfvArea"] : document.getElementById("ctl00_ContentPlaceHolder1_rfvArea");
+ctl00_ContentPlaceHolder1_rfvArea.controltovalidate = "ctl00_ContentPlaceHolder1_ddlArea";
+ctl00_ContentPlaceHolder1_rfvArea.errormessage = "Please Select Area.";
+ctl00_ContentPlaceHolder1_rfvArea.display = "None";
+ctl00_ContentPlaceHolder1_rfvArea.validationGroup = "complaint";
+ctl00_ContentPlaceHolder1_rfvArea.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_rfvArea.initialvalue = "0";
+var ctl00_ContentPlaceHolder1_RequiredFieldValidator3 = document.all ? document.all["ctl00_ContentPlaceHolder1_RequiredFieldValidator3"] : document.getElementById("ctl00_ContentPlaceHolder1_RequiredFieldValidator3");
+ctl00_ContentPlaceHolder1_RequiredFieldValidator3.controltovalidate = "ctl00_ContentPlaceHolder1_txtLocation";
+ctl00_ContentPlaceHolder1_RequiredFieldValidator3.errormessage = "Please Enter Location of Complaint.";
+ctl00_ContentPlaceHolder1_RequiredFieldValidator3.display = "None";
+ctl00_ContentPlaceHolder1_RequiredFieldValidator3.validationGroup = "complaint";
+ctl00_ContentPlaceHolder1_RequiredFieldValidator3.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_RequiredFieldValidator3.initialvalue = "";
+var ctl00_ContentPlaceHolder1_rfvtxtphonenumber = document.all ? document.all["ctl00_ContentPlaceHolder1_rfvtxtphonenumber"] : document.getElementById("ctl00_ContentPlaceHolder1_rfvtxtphonenumber");
+ctl00_ContentPlaceHolder1_rfvtxtphonenumber.controltovalidate = "ctl00_ContentPlaceHolder1_txtContactNo";
+ctl00_ContentPlaceHolder1_rfvtxtphonenumber.focusOnError = "t";
+ctl00_ContentPlaceHolder1_rfvtxtphonenumber.errormessage = "Please Enter Contact Number.";
+ctl00_ContentPlaceHolder1_rfvtxtphonenumber.display = "None";
+ctl00_ContentPlaceHolder1_rfvtxtphonenumber.validationGroup = "complaint";
+ctl00_ContentPlaceHolder1_rfvtxtphonenumber.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_rfvtxtphonenumber.initialvalue = "";
+var ctl00_ContentPlaceHolder1_rfvPreDate = document.all ? document.all["ctl00_ContentPlaceHolder1_rfvPreDate"] : document.getElementById("ctl00_ContentPlaceHolder1_rfvPreDate");
+ctl00_ContentPlaceHolder1_rfvPreDate.controltovalidate = "ctl00_ContentPlaceHolder1_txtEnterDate";
+ctl00_ContentPlaceHolder1_rfvPreDate.focusOnError = "t";
+ctl00_ContentPlaceHolder1_rfvPreDate.errormessage = "Please Select Preferable Date for Visit/Contact";
+ctl00_ContentPlaceHolder1_rfvPreDate.display = "None";
+ctl00_ContentPlaceHolder1_rfvPreDate.validationGroup = "complaint";
+ctl00_ContentPlaceHolder1_rfvPreDate.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_rfvPreDate.initialvalue = "";
+var ctl00_ContentPlaceHolder1_rfvOPT = document.all ? document.all["ctl00_ContentPlaceHolder1_rfvOPT"] : document.getElementById("ctl00_ContentPlaceHolder1_rfvOPT");
+ctl00_ContentPlaceHolder1_rfvOPT.controltovalidate = "ctl00_ContentPlaceHolder1_txtOPT";
+ctl00_ContentPlaceHolder1_rfvOPT.focusOnError = "t";
+ctl00_ContentPlaceHolder1_rfvOPT.errormessage = "Please Enter OTP";
+ctl00_ContentPlaceHolder1_rfvOPT.display = "None";
+ctl00_ContentPlaceHolder1_rfvOPT.validationGroup = "complaint";
+ctl00_ContentPlaceHolder1_rfvOPT.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_rfvOPT.initialvalue = "";
+var ctl00_ContentPlaceHolder1_ValidationSummary1 = document.all ? document.all["ctl00_ContentPlaceHolder1_ValidationSummary1"] : document.getElementById("ctl00_ContentPlaceHolder1_ValidationSummary1");
+ctl00_ContentPlaceHolder1_ValidationSummary1.showmessagebox = "True";
+ctl00_ContentPlaceHolder1_ValidationSummary1.showsummary = "False";
+ctl00_ContentPlaceHolder1_ValidationSummary1.displaymode = "List";
+ctl00_ContentPlaceHolder1_ValidationSummary1.validationGroup = "complaint";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+SessionExpireAlert(900000);var ctl00_mainMenu_Data = new Object();
+ctl00_mainMenu_Data.disappearAfter = 500;
+ctl00_mainMenu_Data.horizontalOffset = 0;
+ctl00_mainMenu_Data.verticalOffset = 0;
+ctl00_mainMenu_Data.staticHoverClass = 'ctl00_mainMenu_8 MenuItemHover';
+ctl00_mainMenu_Data.staticHoverHyperLinkClass = 'ctl00_mainMenu_7 MenuItemHover';
+ctl00_mainMenu_Data.iframeUrl = '/mis/WebResource.axd?d=AUXQX69VI1j4f52LmQUrpeSNYPvxSctKmnLpxRGHVE_kzNqnGJHO9I5LhHrTADw-vkoIjU0e5awWDKJu-MNNtM_maEufoQ9f7DKPTPyd6y81&t=636776922783889403';
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+(function(id) {
+    var e = document.getElementById(id);
+    if (e) {
+        e.dispose = function() {
+            Array.remove(Page_ValidationSummaries, document.getElementById(id));
+        }
+        e = null;
+    }
+})('ctl00_ContentPlaceHolder1_ValidationSummary1');
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":"ctl00_ContentPlaceHolder1_UpdatePanel1","displayAfter":0,"dynamicLayout":true}, null, null, $get("ctl00_ContentPlaceHolder1_updProg"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.CalendarBehavior, {"button":$get("ctl00_ContentPlaceHolder1_imgCal"),"format":"dd-MMM-yyyy","id":"ctl00_ContentPlaceHolder1_CalendarExtender1"}, null, null, $get("ctl00_ContentPlaceHolder1_txtComplaintDate"));
+});
+
+document.getElementById('ctl00_ContentPlaceHolder1_rfvName').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfvName'));
+}
+
+document.getElementById('ctl00_ContentPlaceHolder1_rfvRMDept').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfvRMDept'));
+}
+
+document.getElementById('ctl00_ContentPlaceHolder1_rfvCompNo').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfvCompNo'));
+}
+
+document.getElementById('ctl00_ContentPlaceHolder1_rfvRMV').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfvRMV'));
+}
+
+document.getElementById('ctl00_ContentPlaceHolder1_rfvCompNature').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfvCompNature'));
+}
+
+document.getElementById('ctl00_ContentPlaceHolder1_RequiredFieldValidator2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_RequiredFieldValidator2'));
+}
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.FilteredTextBoxBehavior, {"FilterType":15,"ValidChars":",./\\-@$_  ","id":"ctl00_ContentPlaceHolder1_ftbeCompDetail"}, null, null, $get("ctl00_ContentPlaceHolder1_txtDetails"));
+});
+
+document.getElementById('ctl00_ContentPlaceHolder1_rfvArea').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfvArea'));
+}
+
+document.getElementById('ctl00_ContentPlaceHolder1_RequiredFieldValidator3').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_RequiredFieldValidator3'));
+}
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.FilteredTextBoxBehavior, {"FilterType":15,"ValidChars":"/\\-  ","id":"ctl00_ContentPlaceHolder1_ftebLocation"}, null, null, $get("ctl00_ContentPlaceHolder1_txtLocation"));
+});
+
+document.getElementById('ctl00_ContentPlaceHolder1_rfvtxtphonenumber').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfvtxtphonenumber'));
+}
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.FilteredTextBoxBehavior, {"FilterType":2,"id":"ctl00_ContentPlaceHolder1_ftxNumber"}, null, null, $get("ctl00_ContentPlaceHolder1_txtContactNo"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.FilteredTextBoxBehavior, {"FilterType":2,"id":"ctl00_ContentPlaceHolder1_ftbeOContNo"}, null, null, $get("ctl00_ContentPlaceHolder1_txtContactNoOther"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.CalendarBehavior, {"button":$get("ctl00_ContentPlaceHolder1_ImaCalStartDate"),"format":"dd/MM/yyyy","id":"ctl00_ContentPlaceHolder1_ceLasteDateofReciptTime"}, null, null, $get("ctl00_ContentPlaceHolder1_txtEnterDate"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.MaskedEditBehavior, {"ClientStateFieldID":"ctl00_ContentPlaceHolder1_meReqdate_ClientState","CultureAMPMPlaceholder":"AM;PM","CultureCurrencySymbolPlaceholder":"£","CultureDateFormat":"DMY","CultureDatePlaceholder":"/","CultureDecimalPlaceholder":".","CultureName":"en-GB","CultureThousandsPlaceholder":",","CultureTimePlaceholder":":","ErrorTooltipEnabled":true,"Mask":"99/99/9999","MaskType":1,"id":"ctl00_ContentPlaceHolder1_meReqdate"}, null, null, $get("ctl00_ContentPlaceHolder1_txtEnterDate"));
+});
+
+document.getElementById('ctl00_ContentPlaceHolder1_mevIndDate').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_mevIndDate'));
+}
+
+document.getElementById('ctl00_ContentPlaceHolder1_rfvPreDate').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfvPreDate'));
+}
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.MaskedEditBehavior, {"AcceptAMPM":true,"ClientStateFieldID":"ctl00_ContentPlaceHolder1_meeEnterTime_ClientState","CultureAMPMPlaceholder":"AM;PM","CultureCurrencySymbolPlaceholder":"£","CultureDateFormat":"DMY","CultureDatePlaceholder":"/","CultureDecimalPlaceholder":".","CultureName":"en-GB","CultureThousandsPlaceholder":",","CultureTimePlaceholder":":","ErrorTooltipEnabled":true,"Mask":"99:99:99","MaskType":3,"id":"ctl00_ContentPlaceHolder1_meeEnterTime"}, null, null, $get("ctl00_ContentPlaceHolder1_txtEnterTime"));
+});
+
+document.getElementById('ctl00_ContentPlaceHolder1_mevEnterTime').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_mevEnterTime'));
+}
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.MaskedEditBehavior, {"AcceptAMPM":true,"ClientStateFieldID":"ctl00_ContentPlaceHolder1_meeEnterTimeTo_ClientState","CultureAMPMPlaceholder":"AM;PM","CultureCurrencySymbolPlaceholder":"£","CultureDateFormat":"DMY","CultureDatePlaceholder":"/","CultureDecimalPlaceholder":".","CultureName":"en-GB","CultureThousandsPlaceholder":",","CultureTimePlaceholder":":","ErrorTooltipEnabled":true,"Mask":"99:99:99","MaskType":3,"id":"ctl00_ContentPlaceHolder1_meeEnterTimeTo"}, null, null, $get("ctl00_ContentPlaceHolder1_txtEnterTimeTo"));
+});
+
+document.getElementById('ctl00_ContentPlaceHolder1_mevEnterTimeTo').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_mevEnterTimeTo'));
+}
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.FilteredTextBoxBehavior, {"FilterType":14,"id":"ctl00_ContentPlaceHolder1_ftbeOTP"}, null, null, $get("ctl00_ContentPlaceHolder1_txtOPT"));
+});
+
+document.getElementById('ctl00_ContentPlaceHolder1_rfvOPT').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ContentPlaceHolder1_rfvOPT'));
+}
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","CancelControlID":"ctl00_ContentPlaceHolder1_btnNoDel","OkControlID":"ctl00_ContentPlaceHolder1_btnOkDel","OnCancelScript":"cancelDelClick();","OnOkScript":"okDelClick();","PopupControlID":"ctl00_ContentPlaceHolder1_div","dynamicServicePath":"/mis/Complaints/TRANSACTION/complaint.aspx","id":"mdlPopupDel"}, null, null, $get("ctl00_ContentPlaceHolder1_div"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","CancelControlID":"ctl00_btnNo","DropShadow":true,"OnCancelScript":"cancelClickErr();","PopupControlID":"ctl00_programmaticPopup","PopupDragHandleControlID":"ctl00_programmaticPopupDragHandle","dynamicServicePath":"/mis/Complaints/TRANSACTION/complaint.aspx","id":"programmaticModalPopupBehavior","repositionMode":2}, null, null, $get("ctl00_hiddenTargetControlForModalPopup"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","CancelControlID":"ctl00_btnsNo","OkControlID":"ctl00_btnsYes","OnOkScript":"ResetSession()","PopupControlID":"ctl00_pnlPopup","dynamicServicePath":"/mis/Complaints/TRANSACTION/complaint.aspx","id":"mpeTimeout"}, null, null, $get("ctl00_lnkFake"));
+});
+//]]>
+</script>
+</form>
+    <div id="bottomRight">
+        <a href="http://www.iitms.co.in" target="_blank" title="Developed By : Masters Software, Nagpur.">Developed By : Masters Software, Nagpur.</a>
+    </div>
+
+</body>
+</html>
